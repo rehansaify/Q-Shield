@@ -86,8 +86,6 @@ The implementation follows a disciplined, stage-gated verification methodology i
 | **Stage 3** | Rosenpass PQ Key Exchange Integration | **PASSED** | 14 / 14 | Classic McEliece + ML-KEM PSK injection; mutual PSKs populated. |
 | **Stage 4** | Periodic PSK Rotation & Continuity | **PASSED** | 9 / 9 | 1,520 packets at 100ms; **0.0% packet loss** across 27s & 131s rotations. |
 | **Stage 5** | NetBird Integration Evaluation | **BLOCKED** | 10 passed<br/>4 blocked | Daemons initialized & Rosenpass detected; `wt0` blocked awaiting setup key. |
-| **Stage 6** | Automated Master Test Suite | *Out of Scope* | — | Not implemented; no synthetic test suites created. |
-| **Stage 7** | Reproducible Benchmarking Suite | *Out of Scope* | — | Not implemented; no fabricated benchmark numbers. |
 
 ### Stage 5 Evaluation Summary (Why it is BLOCKED)
 
