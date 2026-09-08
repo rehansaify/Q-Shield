@@ -1,0 +1,97 @@
+{
+  "stage": "Stage 3: Rosenpass Post-Quantum Key Exchange Integration",
+  "timestamp": "2026-09-08T05:34:41.618513+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total_checks": 14,
+    "passed_checks": 14,
+    "failed_checks": 0
+  },
+  "checks": [
+    {
+      "check": "TEST 1: WireGuard Interface Baseline",
+      "status": "PASS",
+      "details": "Interface wg0 exists on qs-server and qs-client"
+    },
+    {
+      "check": "TEST 2: Baseline Transport Functionality",
+      "status": "PASS",
+      "details": "WireGuard tunnel is actively passing traffic"
+    },
+    {
+      "check": "TEST 3: Rosenpass PQ Key Material",
+      "status": "PASS",
+      "details": "PQ keypairs verified (Classic McEliece + ML-KEM, mode 0600)"
+    },
+    {
+      "check": "TEST 4: Rosenpass Server Process",
+      "status": "PASS",
+      "details": "Server daemon active (PID: 534)"
+    },
+    {
+      "check": "TEST 5: Rosenpass Client Process",
+      "status": "PASS",
+      "details": "Client daemon active (PID: 536)"
+    },
+    {
+      "check": "TEST 6: Rosenpass UDP Transport (9999)",
+      "status": "PASS",
+      "details": "Server bound to port 9999 on transport link"
+    },
+    {
+      "check": "TEST 7: Rosenpass Post-Quantum Exchange",
+      "status": "PASS",
+      "details": "Post-quantum exchange verified via mutual PSK delivery"
+    },
+    {
+      "check": "TEST 8: WireGuard PSK Installed",
+      "status": "PASS",
+      "details": "Rosenpass-derived PSK successfully populated on both peers"
+    },
+    {
+      "check": "TEST 9: Zero PSK Leakage & Fingerprint",
+      "status": "PASS",
+      "details": "Keys masked as (hidden); non-secret fingerprint matches (221e3ce48d16...89ccea8f)"
+    },
+    {
+      "check": "TEST 10: Hybrid Handshake Recency",
+      "status": "PASS",
+      "details": "Noise IKpsk2 handshake confirmed with PSK (age: 1s)"
+    },
+    {
+      "check": "TEST 11: Client-to-Server PQ Ping",
+      "status": "PASS",
+      "details": "3/3 packets received over PQ-secured tunnel (0% loss)"
+    },
+    {
+      "check": "TEST 12: Server-to-Client PQ Ping",
+      "status": "PASS",
+      "details": "3/3 packets received over PQ-secured tunnel (0% loss)"
+    },
+    {
+      "check": "TEST 13: Traffic Counter Progression",
+      "status": "PASS",
+      "details": "Counters advanced: Client TX 2216 -> 2856 bytes, Server RX 2216 -> 2856 bytes"
+    },
+    {
+      "check": "TEST 14: Rosenpass Daemon Persistence",
+      "status": "PASS",
+      "details": "Both Rosenpass daemons continue running stably"
+    }
+  ],
+  "metrics": {
+    "client_to_server_loss_pct": 0.0,
+    "server_to_client_loss_pct": 0.0,
+    "handshake_age_seconds": 1,
+    "rosenpass_exchange_status": "authenticated",
+    "wireguard_psk_installed": true,
+    "psk_non_secret_fingerprint": "221e3ce48d1621b8..."
+  },
+  "security_compliance": {
+    "raw_psk_exposed": false,
+    "private_keys_exposed": false,
+    "rosenpass_secret_keys_exposed": false,
+    "credentials_logged": false,
+    "hybrid_security_established": true
+  }
+}

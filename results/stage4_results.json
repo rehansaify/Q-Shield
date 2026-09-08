@@ -1,0 +1,29 @@
+{
+  "stage": "Stage 4: PSK Rotation & Tunnel Continuity",
+  "overall_status": "PASS",
+  "rotation": {
+    "epochs_observed": 3,
+    "intervals_seconds": [
+      27,
+      131
+    ],
+    "min_interval_seconds": 27,
+    "max_interval_seconds": 131,
+    "average_interval_seconds": 79.0
+  },
+  "continuity": {
+    "duration_seconds": 158,
+    "packets_sent": 1520,
+    "packets_received": 1520,
+    "packet_loss_percentage": 0.0,
+    "rtt_min_ms": 0.188,
+    "rtt_avg_ms": 0.536,
+    "rtt_max_ms": 1.78,
+    "rtt_mdev_ms": 0.192
+  },
+  "security_compliance": {
+    "raw_psk_exposed": false,
+    "private_keys_exposed": false,
+    "credentials_logged": false
+  }
+}

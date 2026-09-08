@@ -1,0 +1,33 @@
+{
+    "stage": "Stage 5: NetBird Integration",
+    "overall_status": "BLOCKED",
+    "netbird": {
+        "version": "0.78.1",
+        "interface": "wt0 (pending management registration)",
+        "daemon_status": "RUNNING",
+        "peer_status": "BLOCKED_AWAITING_MANAGEMENT_URL"
+    },
+    "wireguard": {
+        "interface_status": "UP",
+        "handshake_status": "FRESH"
+    },
+    "rosenpass": {
+        "daemon_status": "RUNNING",
+        "integration_status": "OPERATIONAL"
+    },
+    "routing": {
+        "status": "INTACT"
+    },
+    "connectivity": {
+        "client_to_server": "CONNECTED",
+        "server_to_client": "CONNECTED"
+    },
+    "policy": {
+        "tested": false,
+        "status": "NOT_EXECUTED"
+    },
+    "security_compliance": {
+        "raw_keys_exposed": false,
+        "credentials_logged": false
+    }
+}

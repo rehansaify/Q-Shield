@@ -1,0 +1,62 @@
+# ==============================================================================
+# Q-Shield Repository Git Exclusion Rules
+# ==============================================================================
+
+# Cryptographic Keys & Secrets (Strict: Never track private key material)
+*.key
+*.priv
+*.secret
+*.psk
+*.token
+*.pem
+*.crt
+*.der
+*.pqsk
+*.pqpk
+*_sk
+id_rsa*
+id_ed25519*
+
+# Process IDs, Sockets & IPC artifacts
+*.pid
+*.sock
+*.ipc
+
+# Logs & Debug Output
+*.log
+results/*.log
+
+# Temporary Directories & Scratch Caches
+scratch/
+tmp/
+temp/
+runtime/
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor & OS Metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Environment & Configuration Overrides
+.env
+.env.local
+.env.*.local
+config/local/
+config/*.local.*
+
+# Build Artifacts
+build/
+dist/
+*.o
+*.so
+*.dylib
+*.dll
+*.exe

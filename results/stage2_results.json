@@ -1,0 +1,87 @@
+{
+  "stage": "Stage 2: Classical WireGuard Client/Server Tunnel",
+  "timestamp": "2026-09-07T17:15:31.456475+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total_checks": 11,
+    "passed_checks": 11,
+    "failed_checks": 0
+  },
+  "checks": [
+    {
+      "check": "TEST 1: Server wg0 Interface",
+      "status": "PASS",
+      "details": "Interface wg0 exists in qs-server"
+    },
+    {
+      "check": "TEST 2: Client wg0 Interface",
+      "status": "PASS",
+      "details": "Interface wg0 exists in qs-client"
+    },
+    {
+      "check": "TEST 3: Server Listen Port",
+      "status": "PASS",
+      "details": "qs-server listening on UDP 51820"
+    },
+    {
+      "check": "TEST 4: Interface State Display",
+      "status": "PASS",
+      "details": "wg show executed in both namespaces (private keys masked as hidden)"
+    },
+    {
+      "check": "TEST 5: Peer Relationship",
+      "status": "PASS",
+      "details": "Mutual peer relationship confirmed (Client: QTU/7ffK...MyE= <-> Server: SGU0AJtC...0CU=)"
+    },
+    {
+      "check": "TEST 6: Recent Handshake Validation",
+      "status": "PASS",
+      "details": "Handshake age: 1s (within <= 10s requirement)"
+    },
+    {
+      "check": "TEST 7: Client-to-Server Ping",
+      "status": "PASS",
+      "details": "3/3 packets received (0% packet loss)"
+    },
+    {
+      "check": "TEST 8: Server-to-Client Ping",
+      "status": "PASS",
+      "details": "3/3 packets received (0% packet loss)"
+    },
+    {
+      "check": "TEST 9: Client Route to 10.0.0.1",
+      "status": "PASS",
+      "details": "Routes via dev wg0 (10.0.0.1 dev wg0 src 10.0.0.2 uid 0 )"
+    },
+    {
+      "check": "TEST 10: Server Route to 10.0.0.2",
+      "status": "PASS",
+      "details": "Routes via dev wg0 (10.0.0.2 dev wg0 src 10.0.0.1 uid 0 )"
+    },
+    {
+      "check": "TEST 11: WireGuard Traffic Counters",
+      "status": "PASS",
+      "details": "Counters increased: Client TX 19884 -> 20524 bytes, Server RX 19884 -> 20524 bytes"
+    }
+  ],
+  "metrics": {
+    "client_to_server_packet_loss_pct": 0.0,
+    "server_to_client_packet_loss_pct": 0.0,
+    "handshake_age_seconds": 1,
+    "traffic_transfer_verified": true
+  },
+  "routing_verification": {
+    "client_route_10_0_0_1": "10.0.0.1 dev wg0 src 10.0.0.2 uid 0",
+    "server_route_10_0_0_2": "10.0.0.2 dev wg0 src 10.0.0.1 uid 0"
+  },
+  "interface_status": {
+    "server_wg0_up": true,
+    "client_wg0_up": true,
+    "listen_port": 51820
+  },
+  "security_compliance": {
+    "private_keys_exposed": false,
+    "preshared_keys_present": false,
+    "credentials_logged": false
+  }
+}
